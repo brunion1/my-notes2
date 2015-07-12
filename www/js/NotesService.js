@@ -6,6 +6,8 @@ angular.module('mynotes.notestore', [])
     window.localStorage['notes'] = angular.toJson(notes);
   }
   
+  //this enables local storage;
+  
   return {
     list : function(){
       return notes;
