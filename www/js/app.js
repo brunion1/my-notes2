@@ -35,6 +35,9 @@ app.run(function($ionicPlatform) {
 
 app.controller('ListCtrl', function($scope, NoteStore){
   $scope.notes = NoteStore.list();
+  $scope.remove = function(noteId){
+    NoteStore.remove(noteId);
+  }
 });
 
 app.controller('EditCtrl', function($scope, $state, NoteStore){
